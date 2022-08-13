@@ -1,7 +1,7 @@
 import heap_sort 
 import create_bst 
 
-l = [1,5,3,2,0,7]
+l = [1,10,5,3,2,0,7]
 
 #----- Sorting the unsorted list using Heap Sort:  -----
 '''
@@ -12,8 +12,9 @@ In heap sort:
 
 sort_obj = heap_sort.HeapSort()
 heapified_ls = sort_obj.create_max_heap(l)
+print('Heapified:',heapified_ls)
 sorted_ls = sort_obj.heap_sort(heapified_ls)
-print(sorted_ls)
+print('Sorted:',sorted_ls)
 
 
 #-----  Creating BST from sorted list:  -----

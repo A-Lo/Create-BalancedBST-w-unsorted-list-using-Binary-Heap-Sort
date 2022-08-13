@@ -12,7 +12,7 @@ class HeapSort:
 
     #If parent has both childs   
     if max(left_child, right_child) < upper_bound:
-      if  A[i] >= A[max(left_child,right_child)] : return  #If parent greater than both childs, no work needed
+      if  A[i] >= max(A[left_child],A[right_child]) : return  #If parent greater than both childs, no work needed
         
       elif A[left_child] > A[right_child]: 
           self.swap(A, left_child, i)
@@ -29,9 +29,9 @@ class HeapSort:
 
   def create_max_heap(self, A=[]) -> list:
     #Retrieving the Parents nodes only, to heapify
-    parent_node = (len(A)-2) //2
+    parent_nodes = (len(A)-2) //2
     
-    for indx in range(parent_node, -1, -1):
+    for indx in range(parent_nodes, -1, -1):
       self.max_heapify(A, indx, len(A))
 
     return A
