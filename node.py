@@ -26,4 +26,8 @@ class TreeNode:
 
     return result
 
+  def print_level_order(self, result:list):
+    for indx, level in enumerate(result):
+      print(f"Level ({indx}):  {level}")
 
+    

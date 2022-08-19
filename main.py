@@ -40,8 +40,7 @@ print("\nLevel Order Traversal:")
 
 view_levelOrder_ls = create_bst.node.TreeNode().view_BST_level_order(root)
 
-for level in view_levelOrder_ls:
-  print(level)
+create_bst.node.TreeNode().print_level_order(view_levelOrder_ls)
 
 
 
