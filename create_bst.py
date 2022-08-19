@@ -1,5 +1,6 @@
 import node 
 
+#Creates a balanced binary serach tree from sorted Array
 class BST:
   def listToBST(self, nums: list):
     

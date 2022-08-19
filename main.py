@@ -23,7 +23,7 @@ print('Sorted:',sorted_ls)
 root_obj = create_bst.BST()
 root = root_obj.listToBST(sorted_ls)
 
-
+print()
 #-----  Viewing BST structure:  -----
 print(f"Root value: {root.val}")
 print(f"Root left child: {root.left.val}")
@@ -35,7 +35,17 @@ print(f"Root left-right child: {root.left.right.val}")
 print(f"Root right-left child: {root.right.left.val}")
 
 
+#-----  Viewing BST structure by Level Order Traversal:  -----
+print("\nLevel Order Traversal:")
 
+view_levelOrder_ls = create_bst.node.TreeNode().view_BST_level_order(root)
+
+for level in view_levelOrder_ls:
+  print(level)
+
+
+
+  
 #-----  Manual Creation of Unbalanced BT:  -----
 
 root_unbalaned = create_bst.node.TreeNode(4)
